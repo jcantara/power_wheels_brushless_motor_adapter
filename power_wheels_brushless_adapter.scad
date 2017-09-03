@@ -2,14 +2,14 @@
 motor_plate_thickness = 5; // mm
 
 // hub is the round section that "inserts" into the PW transmission from the motor
-hub_diameter = 15;
-hub_thickness = 7;
+hub_diameter = 21.2;
+hub_thickness = 4.2;
 
 axle_hole_diameter = 5; // hole for motor axle
 
-power_wheels_bolt_thread_diameter = 2;
-power_wheels_nut_flat_width = 4; // semi-captive nut for stock PW bolt to screw into and hold motor plate
-power_wheels_bolt_hole_separation = 20; // center-to-center distance of PW bolts
+power_wheels_bolt_thread_diameter = 3;
+power_wheels_nut_flat_width = 5; // semi-captive nut for stock PW bolt to screw into and hold motor plate
+power_wheels_bolt_hole_separation = 25; // center-to-center distance of PW bolts
 
 brushless_bolt_thread_diameter = 3;
 brushless_bolt_count = 4; // or 2 or 3 depending on motor
@@ -75,3 +75,4 @@ module hexagon(flat_width) {
     circle_diameter = flat_width * sqrt(3);
     circle($fn=6, d=circle_diameter);
 }
+
