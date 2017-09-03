@@ -36,18 +36,18 @@ difference() {
             hole_depth = motor_plate_thickness + hub_thickness + 2; // all holes through entire object + more
             // axle hole
             linear_extrude(hole_depth) {
-                circle(d=axle_hole_diameter);
+                circle(d=axle_hole_diameter, $fn=15);
             }
             // PW bolt holes
             linear_extrude(hole_depth) {
                 translate([power_wheels_bolt_hole_separation/2,0,0]) {
-                    circle(d=power_wheels_bolt_thread_diameter);
+                    circle(d=power_wheels_bolt_thread_diameter, $fn=15);
                 }
                 translate([-power_wheels_bolt_hole_separation/2,0,0]) {
-                    circle(d=power_wheels_bolt_thread_diameter);
+                    circle(d=power_wheels_bolt_thread_diameter, $fn=15);
                 }
             }
-            // PW bolt nut hexagonal captive hole
+            // PW bolt hexagonal captive nut hole
             linear_extrude(motor_plate_thickness/2 + 1) {
                 translate([power_wheels_bolt_hole_separation/2,0,0]) {
                     hexagon(power_wheels_nut_flat_width);
@@ -62,7 +62,7 @@ difference() {
                     echo("my rotation amount is: ", rotate_amount);
                     translate([brushless_bolt_separation/2,0,0]){
                         linear_extrude(hole_depth){
-                            circle(d=brushless_bolt_thread_diameter);
+                            circle(d=brushless_bolt_thread_diameter, $fn=15);
                         }
                     }
                 }
