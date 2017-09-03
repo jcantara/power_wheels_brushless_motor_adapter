@@ -3,4 +3,4 @@
 
 OpenSCAD template with variable definitions for easily modifying brushless mount plate for various motors
 
-Variables are currently just placeholders, if you print this as-is, it won't fit anything; not measured. I will update that soon for the powerwheels car I have and hopefully that's somewhat universal. 
+`brushless_bolt_*` variables all need to be set according to the specific brushless motor being used. The other variables are set correctly for the Power Wheels I have; though I know there are other transmission designs, so no promises that it will fit all of them.
